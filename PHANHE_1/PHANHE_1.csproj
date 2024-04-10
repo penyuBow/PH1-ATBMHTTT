@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{459FAF66-97B9-464C-A8A6-9FE9E88787D2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PHANHE_1</RootNamespace>
+    <AssemblyName>PHANHE_1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Connection\DBOracleUtils.cs" />
+    <Compile Include="CreateRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateRole.Designer.cs">
+      <DependentUpon>CreateRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateUser.Designer.cs">
+      <DependentUpon>CreateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditUser.Designer.cs">
+      <DependentUpon>EditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrantPrivs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GrantPrivs.Designer.cs">
+      <DependentUpon>GrantPrivs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrantRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GrantRole.Designer.cs">
+      <DependentUpon>GrantRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelperControl.cs" />
+    <Compile Include="InfPrivs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfPrivs.Designer.cs">
+      <DependentUpon>InfPrivs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\AllLayout.cs" />
+    <Compile Include="PhanHe_2\Cryptography.cs" />
+    <Compile Include="PhanHe_2\GiamDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\GiamDoc.designer.cs">
+      <DependentUpon>GiamDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\NhanSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\NhanSu.Designer.cs">
+      <DependentUpon>NhanSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\NhanVien.Designer.cs">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\QuanLyTrucTiep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\QuanLyTrucTiep.Designer.cs">
+      <DependentUpon>QuanLyTrucTiep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\TaiChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\TaiChinh.Designer.cs">
+      <DependentUpon>TaiChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\TruongDeAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\TruongDeAn.Designer.cs">
+      <DependentUpon>TruongDeAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\TruongPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\TruongPhong.Designer.cs">
+      <DependentUpon>TruongPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\AddNotification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\AddNotification.Designer.cs">
+      <DependentUpon>AddNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\Admin_UpdateKey.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\Admin_UpdateKey.Designer.cs">
+      <DependentUpon>Admin_UpdateKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\Audit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\Audit.Designer.cs">
+      <DependentUpon>Audit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\Encryption.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\Encryption.Designer.cs">
+      <DependentUpon>Encryption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\EnterKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\EnterKey.designer.cs">
+      <DependentUpon>EnterKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\GiamDoc_XemDSNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\GiamDoc_XemDSNhanVien.Designer.cs">
+      <DependentUpon>GiamDoc_XemDSNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\NhanSu_EditNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\NhanSu_EditNhanVien.Designer.cs">
+      <DependentUpon>NhanSu_EditNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\NhanSu_EditPhongBan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\NhanSu_EditPhongBan.Designer.cs">
+      <DependentUpon>NhanSu_EditPhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\NhanVien_PhanCong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\NhanVien_PhanCong.Designer.cs">
+      <DependentUpon>NhanVien_PhanCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\Notification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\Notification.Designer.cs">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\PhanCongEveryone.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\PhanCongEveryone.Designer.cs">
+      <DependentUpon>PhanCongEveryone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\QLTrucTiep_DSDeAn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\QLTrucTiep_DSDeAn.Designer.cs">
+      <DependentUpon>QLTrucTiep_DSDeAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\QLTrucTiep_DSPhongBan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\QLTrucTiep_DSPhongBan.Designer.cs">
+      <DependentUpon>QLTrucTiep_DSPhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\QLTrucTiep_Task.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\QLTrucTiep_Task.Designer.cs">
+      <DependentUpon>QLTrucTiep_Task.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\QLTrucTiep_TaskEmp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\QLTrucTiep_TaskEmp.Designer.cs">
+      <DependentUpon>QLTrucTiep_TaskEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\QLTrucTiep_ThongTinNV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\QLTrucTiep_ThongTinNV.Designer.cs">
+      <DependentUpon>QLTrucTiep_ThongTinNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\SuaProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\SuaProfile.Designer.cs">
+      <DependentUpon>SuaProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\TaiChinh_DSNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\TaiChinh_DSNhanVien.Designer.cs">
+      <DependentUpon>TaiChinh_DSNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\TruongDeAn_CapNhatDeAn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\TruongDeAn_CapNhatDeAn.Designer.cs">
+      <DependentUpon>TruongDeAn_CapNhatDeAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\TruongPhong_DSNV_HieuChinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\TruongPhong_DSNV_HieuChinh.Designer.cs">
+      <DependentUpon>TruongPhong_DSNV_HieuChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\TruongPhong_XemNV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\TruongPhong_XemNV.Designer.cs">
+      <DependentUpon>TruongPhong_XemNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\XemProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhanHe_2\UserController\XemProfile.Designer.cs">
+      <DependentUpon>XemProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLPrivs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLPrivs.Designer.cs">
+      <DependentUpon>QLPrivs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLUser_Role.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLUser_Role.Designer.cs">
+      <DependentUpon>QLUser_Role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RevokeGrant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RevokeGrant.Designer.cs">
+      <DependentUpon>RevokeGrant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemBang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemBang.designer.cs">
+      <DependentUpon>ThemBang.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CreateRole.resx">
+      <DependentUpon>CreateRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateUser.resx">
+      <DependentUpon>CreateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditUser.resx">
+      <DependentUpon>EditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrantPrivs.resx">
+      <DependentUpon>GrantPrivs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrantRole.resx">
+      <DependentUpon>GrantRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfPrivs.resx">
+      <DependentUpon>InfPrivs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\GiamDoc.resx">
+      <DependentUpon>GiamDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\NhanSu.resx">
+      <DependentUpon>NhanSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\NhanVien.resx">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\QuanLyTrucTiep.resx">
+      <DependentUpon>QuanLyTrucTiep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\TaiChinh.resx">
+      <DependentUpon>TaiChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\TruongDeAn.resx">
+      <DependentUpon>TruongDeAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\TruongPhong.resx">
+      <DependentUpon>TruongPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\UserController\AddNotification.resx">
+      <DependentUpon>AddNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\UserController\Admin_UpdateKey.resx">
+      <DependentUpon>Admin_UpdateKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\UserController\Audit.resx">
+      <DependentUpon>Audit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\UserController\Encryption.resx">
+      <DependentUpon>Encryption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\UserController\EnterKey.resx">
+      <DependentUpon>EnterKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\UserController\GiamDoc_XemDSNhanVien.resx">
+      <DependentUpon>GiamDoc_XemDSNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\UserController\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\UserController\NhanSu_EditNhanVien.resx">
+      <DependentUpon>NhanSu_EditNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\UserController\NhanSu_EditPhongBan.resx">
+      <DependentUpon>NhanSu_EditPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\UserController\NhanVien_PhanCong.resx">
+      <DependentUpon>NhanVien_PhanCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\UserController\Notification.resx">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\UserController\PhanCongEveryone.resx">
+      <DependentUpon>PhanCongEveryone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\UserController\QLTrucTiep_DSDeAn.resx">
+      <DependentUpon>QLTrucTiep_DSDeAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\UserController\QLTrucTiep_DSPhongBan.resx">
+      <DependentUpon>QLTrucTiep_DSPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\UserController\QLTrucTiep_Task.resx">
+      <DependentUpon>QLTrucTiep_Task.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\UserController\QLTrucTiep_TaskEmp.resx">
+      <DependentUpon>QLTrucTiep_TaskEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\UserController\QLTrucTiep_ThongTinNV.resx">
+      <DependentUpon>QLTrucTiep_ThongTinNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\UserController\SuaProfile.resx">
+      <DependentUpon>SuaProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\UserController\TaiChinh_DSNhanVien.resx">
+      <DependentUpon>TaiChinh_DSNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\UserController\TruongDeAn_CapNhatDeAn.resx">
+      <DependentUpon>TruongDeAn_CapNhatDeAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\UserController\TruongPhong_DSNV_HieuChinh.resx">
+      <DependentUpon>TruongPhong_DSNV_HieuChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\UserController\TruongPhong_XemNV.resx">
+      <DependentUpon>TruongPhong_XemNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe_2\UserController\XemProfile.resx">
+      <DependentUpon>XemProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QLPrivs.resx">
+      <DependentUpon>QLPrivs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLUser_Role.resx">
+      <DependentUpon>QLUser_Role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RevokeGrant.resx">
+      <DependentUpon>RevokeGrant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemBang.resx">
+      <DependentUpon>ThemBang.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Oracle.ManagedDataAccess">
+      <Version>21.9.0</Version>
+    </PackageReference>
+    <PackageReference Include="Oracle.ManagedDataAccess.EntityFramework">
+      <Version>21.9.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-page-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-organization-chart-people-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-project-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ssh-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-task-completed-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-access-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-staff-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-staff-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\icons8-full-stop-24.png" />
+    <None Include="Resources\icons8-key-30.png" />
+    <None Include="Resources\icons8_full_stop_24.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
